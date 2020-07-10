@@ -126,8 +126,15 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-
-
+function divider(numbersArray){
+  const array1 = []
+  const array2 = []
+  for (let i=0; i<numbersArray.length; i++){
+    if( numsArray[i] % 2 === 0){array1.push(numbersArray[i])
+    } else {array2.push(numbersArray[i])}
+  }
+  return numsArray=[array1, array2]
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -148,6 +155,13 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+function finder(arr){
+  let randomNumber = getRandomArbitrary()
+  for (i=0; i<arr.length; i++){
+    if(arr[i] === randomNumber){return true}
+  }
+  return false
+}
 
 
 
@@ -177,8 +191,23 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem (myGroceryList, item){
+  if (item){
+  for (i=0; i<myGroceryList.length; i++){
+    if(myGroceryList[i] === item){myGroceryList.splice(i,1)}
+  }} else { myGroceryList = []}
+  return myGroceryList
+  }
+function addItem (myGroceryList, item){
+  if(item){
+ if(myGroceryList.indexOf(item) === -1){
+   myGroceryList.push(item)}
+ } else {myGroceryList = []}
+   return myGroceryList
 
-
+}
+removeItem(myGroceryList, `chips`)
+addItem(myGroceryList, `Jerky`)
 
 ////////// PROBLEM 9 //////////
 
