@@ -130,7 +130,7 @@ function divider(numbersArray){
   const array1 = []
   const array2 = []
   for (let i=0; i<numbersArray.length; i++){
-    if( numsArray[i] % 2 === 0){array1.push(numbersArray[i])
+    if( numbersArray[i] % 2 === 0){array1.push(numbersArray[i])
     } else {array2.push(numbersArray[i])}
   }
   return numsArray=[array1, array2]
@@ -216,7 +216,13 @@ addItem(myGroceryList, `Jerky`)
 */
 
 //Code Here
-
+function maker(){
+  let array = []
+  for(let i=1; i<=215; i++){
+    array.push(i)
+  }
+  return array
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -232,6 +238,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+function addTen(numbers){
+  let newNumbers = []
+  for(let i=0; i<numbers.length; i++){
+    newNumbers.push(numbers[i]*1+10)
+  }
+  return newNumbers
+}
 
 
 
@@ -257,7 +270,11 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function longer(arr1, arr2){
+  if(arr1.length > arr2.length){
+    return arr1
+  } else { return arr2}
+}
 
 
 /*
@@ -269,7 +286,15 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function both(arr1, arr2){
+  const newArray=[];
+  for(let i=0; i < arr1.length; i++){
+    for(let j=0; j < arr2.length; j++){
+      if(arr1[i] === arr2[j]){newArray.push(arr1[i])}
+    }
+  }
+  return newArray
+}
 
 
 ////////// PROBLEM 12 //////////
@@ -310,7 +335,7 @@ var colt = {
 */
 
 //Code Here
-
+devMountainEmployees =[joe, cahlan, ryan, colt]
 
 
 /*
@@ -320,7 +345,11 @@ var colt = {
 
 //Code Here
 
-
+  for(let i = 0; i < devMountainEmployees.length; i++){
+  if(devMountainEmployees[i].name === 'Cahlan'){
+    devMountainEmployees.splice(i ,1)
+  }
+}
 
 ////////// PROBLEM 13 //////////
 
@@ -331,7 +360,7 @@ var colt = {
 */
 
 //Code Here
-
+let users = [];
 
 
 /*
@@ -353,8 +382,28 @@ var user1 = {
 
 //Code Here
 
+var user2 = {
+  name: 'Trevor Gridley',
+  email: 'aleut@thegrid.net',
+  password: 'youcantguessit',
+  username: 'whatsleep'
+}
 
+var user3 = {
+  name: 'Tom Jones',
+  email: 'ising@gmail.com',
+  password: 'lasvegas',
+  username: 'mrjones'
+}
 
+var user4 = {
+  name: 'Tessa Schmanski',
+  email: 'elliesmom@gmail.com',
+  password: 'shesmydaughter',
+  username: 'dazedandconfused'
+}
+
+users = [user1, user2, user3, user4];
 /*
   Now you have a very common data structure. 
   Twitter is a good use case.
@@ -367,6 +416,11 @@ var user1 = {
 
 //Code Here
 
+for(let i = 0; i < users.length; i++){
+  if(users[i].email === 'mark.mciver@devmounta.in'){
+    users.splice(i ,1)
+  }
+}
 
 
 /*
